@@ -26,4 +26,4 @@ jobs:
       #     $response | Select-Object name, description | Format-Table
 
       - name: Get Public Repos
-        uses: ./.github/actions/pull-repos
+        run: ./.github/actions/pull-repos
