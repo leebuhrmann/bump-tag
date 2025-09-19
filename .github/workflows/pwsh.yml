@@ -25,5 +25,7 @@ jobs:
       #     $Response = Invoke-RestMethod -Uri $Uri -Headers $Headers -Method Get
       #     $response | Select-Object name, description | Format-Table
 
+      - name: Checkout Repo
+        uses: actions/checkout@v3
       - name: Get Public Repos
-        run: ./.github/actions/pull-repos
+        run: ./.github/actions/pull-repos.bat
