@@ -33,4 +33,4 @@ jobs:
       - name: List Files
         run: dir
       - name: Get Public Repos
-        run: .\pull-repos.ps1
+        run: .\pull-repos.ps1 -token ${{ secrets.github_pat }}
