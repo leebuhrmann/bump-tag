@@ -1,8 +1,10 @@
 name: PowerShell Example
 
 on:
-    workflow_dispatch:
     workflow_call:
+      secrets:
+        github_pat:
+          required: true
 
 jobs:
   ps-job:
