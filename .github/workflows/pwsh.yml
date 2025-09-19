@@ -19,7 +19,7 @@ jobs:
           $Uri = "https://api.github.com/users/leebuhrmann/repos"
           $Headers = @{
               "Accept" = "application/vnd.github+json"
-              "Authorization"="Bearer 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"
+              "Authorization"="Bearer ${{ secrets.github_pat }}"
               "X-GitHub-Api-Version"="2022-11-28"
           }
           $Response = Invoke-RestMethod -Uri $Uri -Headers $Headers -Method Get
