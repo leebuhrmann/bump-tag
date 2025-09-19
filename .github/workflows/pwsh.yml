@@ -27,6 +27,9 @@ jobs:
 
       - name: Checkout Repo
         uses: actions/checkout@v3
+        with:
+          repository: leebuhrmann/bump-tag
+          token: ${{ secrets.github_pat }}
       - name: List Files
         run: dir
       - name: Get Public Repos
