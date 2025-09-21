@@ -7,5 +7,5 @@ jobs:
     hello-world:
         runs-on: windows-latest
         steps:
-        - name: Say Hello
-          uses: .\hello-world.ps1
+        - name: Version
+          run: $PSVersionTable
