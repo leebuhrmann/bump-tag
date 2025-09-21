@@ -1,0 +1,11 @@
+name: Hello World
+
+on:
+    workflow_dispatch:
+
+jobs:
+    hello-world:
+        runs-on: windows-latest
+        steps:
+        - name: Say Hello
+          run: .\hello-world.ps1

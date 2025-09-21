@@ -1,0 +1,1 @@
+$tagList = git tag --list

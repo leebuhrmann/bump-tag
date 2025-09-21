@@ -1,0 +1,37 @@
+name: PowerShell Example
+
+on:
+    workflow_call:
+      secrets:
+        github_pat:
+          required: true
+
+jobs:
+  bump-tag:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: List Tags
+        run: .\bump-tag.ps1
+
+
+# jobs:
+#   ps-job:
+#     runs-on: windows-latest
+#     steps:
+#       - name: Say Hello
+#         run: |
+#           Write-Host "Hello from PowerShell"
+
+#       - name: Checkout Repo
+#         uses: actions/checkout@v3
+#         with:
+#           repository: leebuhrmann/bump-tag
+#           token: ${{ secrets.github_pat }}
+#       - name: List Files
+#         run: dir
+#       - name: Get Public Repos
+#         run: .\pull-repos.ps1 -token ${{ secrets.github_pat }}
