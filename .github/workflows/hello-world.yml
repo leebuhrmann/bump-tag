@@ -11,4 +11,4 @@ jobs:
         - uses: actions/checkout@v4
 
         - name: Say Hello
-          uses: ./hello-world.ps1
+          run: ./hello-world.ps1
