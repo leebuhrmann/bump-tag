@@ -6,6 +6,10 @@ on:
 jobs:
     hello-world:
         runs-on: windows-latest
+
         steps:
-        - name: Version
-          uses: leebuhrmann/bump-tag/hello-world.ps1@main
+        - name: Checkout Repo
+          uses: actions/checkout@v4
+
+        - name: Say Hello
+          uses: ./hello-world.ps1
